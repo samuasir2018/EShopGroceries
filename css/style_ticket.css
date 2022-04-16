@@ -1,0 +1,16 @@
+.ticketTitle{
+    padding-top: 2%;
+    text-align: center;
+    padding-bottom: 3%;
+    font-style: bold;
+}
+
+h3 {
+    text-align: right;
+    padding-bottom: 3%;
+}
+
+.ticketDebt h4{
+    font-style: bold;
+    text-align: center;
+}

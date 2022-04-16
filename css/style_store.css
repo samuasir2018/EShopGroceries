@@ -1,0 +1,137 @@
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 99%;
+    height: auto;
+}
+.barraBusqueda{
+    padding-top: 1%;
+    position: relative;
+}
+
+.lupa{
+    max-width: 5%;
+    height: auto;
+    position: absolute;
+    margin-top: -0.8%;
+}
+
+h5{
+    color: black;
+    font-style: bold;
+}
+
+p{
+    color: black;
+    font-style: bold;
+}
+
+.carousel{
+    padding-top: 2%;
+    max-width: 100%;
+    max-height: 80%;
+    height: auto;
+}
+
+
+.carousel img {
+    max-width: 100%;
+    height: auto;
+}
+
+.centroRegistro{
+    background-color: #F4F4F4;
+    margin-top: 5%;
+    margin-left: 0.5%;
+    border-radius: 15px;
+}
+
+.tiraProductos{
+    background-color: white;
+}
+
+.productoIndivual{
+    max-width: 50%;
+    max-height: 50%;
+    text-align: center;
+}
+
+.productoIndivual img{
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.textoCantidad{
+    margin-left: 10%;
+}
+
+.carrito{
+    background-color: #C4C4C4;
+    border-radius: 15px;
+    padding-top: 1%;
+}
+
+.carrito h3{
+    color: white;
+    font-style: bold;
+}
+
+
+
+@media only screen and (max-width: 1000px){
+    .carritoRow{
+    }
+
+    .carritoIMG{
+        max-width: 130%;
+        max-height: none;
+    }
+}
+
+@media only screen and (min-width: 1001px){
+    .carritoRow{
+    }
+
+    .carritoIMG{
+        max-width: 100%;
+        max-height: none;
+        margin-top: -14%;
+    }
+
+    .carrito h3{
+        margin-top: 20%;
+        margin-left: 20%;
+    }
+}
+
+.hrBasket{
+    color: white;
+}
+
+.resultadosBusqueda{
+    margin-left: 2%;
+}
+
+.iconBasket{
+    max-width: 80%;
+    max-height: auto;
+}
+
+.iconRemove{
+    max-width: 80%;
+    max-height: auto;
+    cursor: pointer;
+}
+
+.btn.btn-danger.botonPagar{
+    left: 35.5%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5%;
+    background-color: #ED0000;
+}
+
+.tituloCarrousel h2{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
