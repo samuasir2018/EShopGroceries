@@ -19,9 +19,10 @@
 * Pagar (con validación)
 
 > Posibles mejoras para el proyecto:
-* `Recuperación de contraseña`, actualmente la vista de recuperación de contraseña no tiene funcionalidad alguna
-* `Envio de correos con usuarios registrados para informar de problemas o sugerencias`, al igual que la funcionalidad de recuperar contraseñas, esto no ha sido terminado, ya que no encontré manera de hacer envios de correos
-_Si que los modales con los formularios están planteados, pero no generar ningún correo_
+* `Recuperación de contraseña:` actualmente la vista de recuperación de contraseña no tiene funcionalidad alguna
+* `Envio de correos con usuarios registrados para informar de problemas o sugerencias:` al igual que la funcionalidad de recuperar contraseñas, esto no ha sido terminado, ya que no encontré manera de hacer envios de correos
+
+_Los modales con los formularios están planteados, pero no envian ningún correo_
 
 ### **Tecnologías empleadas:**
 * Javascript
