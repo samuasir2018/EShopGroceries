@@ -74,7 +74,7 @@
         public function userLoggedIn(){
             $usuarioSesion = $_SESSION['user']['name'];
             if (!isset($usuarioSesion)){
-                header ("Location: index.php"); // Si no está logeado le lleva al index.php
+                header ("Location: inicio.php"); // Si no está logeado le lleva al index.php
             } else {
                 echo "<h5>Bienvenido ".$usuarioSesion.". Click para <a href='salir.php'>Salir</a><br><br></h5>";
                 echo "<input type='hidden' id='usuario' value='".$_SESSION['user']['email']."'></input>";
@@ -94,7 +94,7 @@
         public function userLoggedInTicket($orderId){
             $usuarioSesion = $_SESSION['user']['name'];
             if (!isset($usuarioSesion)){
-                header ("Location: index.php");
+                header ("Location: inicio.php");
             } else {
                 $daoOrder = new DaoOrder();
                 $arrayOrderDetails = $daoOrder->getDataOrder($orderId);
@@ -104,7 +104,7 @@
                     echo "<h3>Cliente: ".$arrayOrderDetails['email'];
                     //Arriba inicio la sesion y muestro el nombre de usuario para dar feedback sobre con que usuario se conecta
                 } else{
-                    header ("Location: index.php");
+                    header ("Location: inicio.php");
                     exit();
                 }
             } /* Similar a userLoggedIn pero sirve para que los usuarios no puedan ver ticket de otros usuarios, ya que comprueba la sesión frente al usuario que realizó el Pedido con Número X (por ejemplo orderId 5), esto lo hace con una consulta a la base de datos */

@@ -38,12 +38,12 @@
             </div>
             <div class="col-1 padding-0 padding-Menu">
                 <div class="menuLateralDerecho">
-                    <a href="./index.php">Inicio</a>
+                    <a href="./inicio.php">Inicio</a>
                 </div>
             </div>
             <div class="col-1 padding-0 padding-Menu">
                 <div class="menuLateralDerecho">
-                    <a href="./index.php">Perfil</a>
+                    <a href="./inicio.php">Perfil</a>
                 </div>
             </div>
             <div class="col-1 padding-0 padding-Menu">
