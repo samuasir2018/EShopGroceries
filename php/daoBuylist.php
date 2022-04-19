@@ -20,7 +20,7 @@
                             <div class="carousel-inner">
 
                                 <div class="carousel-item active">
-                                    <a href="buylist.php?BuylistId=1"><img src="./img/icons/Carousel.jpg" class="d-block w-100" alt="...">
+                                    <a href="buylist.php?BuylistId=1"><img src="../img/icons/Carousel.jpg" class="d-block w-100" alt="...">
                                     <div class="carousel-caption d-none d-md-block tituloCarrousel">
                                         <h2>Semana de los lacteos</h2>
                                     </div>
@@ -28,7 +28,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <a href="buylist.php?BuylistId=2"><img src="./img/icons/Carousel2.jpg" class="d-block w-100" alt="...">
+                                    <a href="buylist.php?BuylistId=2"><img src="../img/icons/Carousel2.jpg" class="d-block w-100" alt="...">
                                     <div class="carousel-caption d-none d-md-block tituloCarrousel">
                                         <h2>Lo mejor de la Panaderia</h2>
                                     </div>
@@ -36,7 +36,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <a href="buylist.php?BuylistId=3"><img src="./img/icons/Carousel3.jpg" class="d-block w-100" alt="...">
+                                    <a href="buylist.php?BuylistId=3"><img src="../img/icons/Carousel3.jpg" class="d-block w-100" alt="...">
                                     <div class="carousel-caption d-none d-md-block tituloCarrousel">
                                         <h2>Bebidas Refrescantes</h2>
                                     </div>
@@ -86,7 +86,7 @@
 
                     echo '
                     <div class="col-4 productoIndivual">
-                        <img src="'.$product["icon"].'" class="card-img-top" alt="...">
+                        <img src="../'.$product["icon"].'" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">'.$product["product"].' - Precio: '.$product["price"].'€</h5>
                             <div class="row textoCantidad">

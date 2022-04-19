@@ -71,7 +71,7 @@
             foreach ($arrayProductos as $product){
                 echo '
                 <div class="col-4 productoIndivual">
-                    <img src="'.$product["icon"].'" class="card-img-top" alt="...">
+                    <img src="../'.$product["icon"].'" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">'.$product["product"].' - Precio: '.$product["price"].'€</h5>
                         <div class="row textoCantidad">
@@ -93,7 +93,7 @@
             foreach ($arrayProductos as $product){
                 echo '
                 <div class="col-4 productoIndivual">
-                    <img src="'.$product["icon"].'" class="card-img-top" alt="...">
+                    <img src="../'.$product["icon"].'" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">'.$product["product"].' - Precio: '.$product["price"].'€</h5>
                         <div class="row textoCantidad">

@@ -63,7 +63,7 @@
                     <input type="text" class="form-control inputBusqueda" name="BUSQUEDA" id="inputBusqueda" placeholder="Buscar ...">
                 </div>
                 <div class="col-1">
-                    <input type="image" src="img/icons/Lupa.png" class="lupa"></input>
+                    <input type="image" src="../img/icons/Lupa.png" class="lupa"></input>
                 </div>
             </div>
         </form>

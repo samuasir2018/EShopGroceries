@@ -33,7 +33,7 @@
                             '.$pedido["date"].'</td>
                             <td>
                             '.$pedido["total"].'</td>
-                            <td><a href="ticket.php?ticketId='.$pedido["orderId"].'" target="_blank"><img class="iconTicket" src="img/icons/viewOrder.jpg"></img></a></td>
+                            <td><a href="ticket.php?ticketId='.$pedido["orderId"].'" target="_blank"><img class="iconTicket" src="../img/icons/viewOrder.jpg"></img></a></td>
                         </tr>
                     </table>
                 </div>';

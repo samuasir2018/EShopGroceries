@@ -1,9 +1,9 @@
 <?php
-    require_once('php/daoProduct.php');
-    require_once('php/daoBasket.php');
-    require_once('php/basket.php');
-    require_once('php/daoUser.php');
-    require_once('php/daoOrder.php');
+    require_once('../php/daoProduct.php');
+    require_once('../php/daoBasket.php');
+    require_once('../php/basket.php');
+    require_once('../php/daoUser.php');
+    require_once('../php/daoOrder.php');
 ?>
 
 <!doctype html>
@@ -31,7 +31,7 @@
     <body>
         <div class="row">
             <div class="col-6 padding-Logo ">
-                <img class="logo" src="img/logo/logo.png"></img>
+                <img class="logo" src="../img/logo/logo.png"></img>
             </div>
             <div class="col-3">
             </div>
@@ -132,7 +132,7 @@
         <!-- JS propios -->
         <script type="module" src="../js/jquery-3.2.1.min.js"></script>
         <script type="module" src="../js/collapsible.js"></script>
-        <script src="js/basketController.js"></script>
+        <script src="../js/basketController.js"></script>
     </body>
     <footer>
         <hr>
