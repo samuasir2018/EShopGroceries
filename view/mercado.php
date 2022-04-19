@@ -20,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="../css/style_main.css"></link>
         <link rel="stylesheet" type="text/css" href="../css/style_store.css"></link>
 
-        <title>EShopGroceries - Busqueda</title>
+        <title>EShopGroceries - Mercado</title>
         <link rel="icon" type="image/x-icon" href="../img/logo/logo.png">
     </head>
 
@@ -29,7 +29,6 @@
     ?>
 
     <body>
-
         <div class="row">
             <div class="col-9 padding-Logo ">
                 <img class="logo" src="../img/logo/logo.png"></img>
@@ -63,7 +62,7 @@
                     <input type="text" class="form-control inputBusqueda" name="BUSQUEDA" id="inputBusqueda" placeholder="Buscar ...">
                 </div>
                 <div class="col-1">
-                    <input type="image" src="img/icons/Lupa.png" class="lupa"></input>
+                    <input type="image" src="../img/icons/Lupa.png" class="lupa"></input>
                 </div>
             </div>
         </form>
@@ -73,26 +72,13 @@
             $daoBuylist->printBuylist();
         ?>
 
-
         <div class="container-fluid centroRegistro">
            <div class="row">
                <div class="col-10 tiraProductos">
                     <div class="row">
                     <?php
-
-                        if (isset($_POST['BUSQUEDA'])){
-                            $busqueda = $_POST['BUSQUEDA'];
-                            if ($busqueda != null){
-                                echo '
-                                <h4>Resultados para la busqueda de "'.$busqueda.'"</h4>
-                                ';
-                            }
-                        } else{
-                            $busqueda = "%";
-                        }
-
-                        $daoProduct = new DaoProduct();
-                        $daoProduct->printSearch($busqueda);
+                        $objDaoProducto = new daoProduct();
+                        $objDaoProducto->printMarket();
                     ?>
                     </div>
                </div>
