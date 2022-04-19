@@ -34,7 +34,7 @@
 
         <div class="row">
             <div class="col-9 padding-Logo ">
-                <img class="logo" src="img/logo/logo.png"></img>
+                <img class="logo" src="../img/logo/logo.png"></img>
             </div>
             <div class="col-1 padding-0 padding-Menu">
                 <div class="menuLateralDerecho">
