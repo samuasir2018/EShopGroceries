@@ -121,7 +121,7 @@
                             $objBasket->updateBasket($_SESSION['user']['email']);
                             $objBasket->printBasket();
                         ?>
-                        <button onclick="location.href='../pagar.php'" type="button" class="btn btn-danger botonPagar">Finalizar</button>
+                        <button onclick="location.href='./pagar.php'" type="button" class="btn btn-danger botonPagar">Finalizar</button>
                         <br><br>
                     </div>
                 </div>
