@@ -22,12 +22,14 @@
             $postcode = $objUser->getPostcode();
             $phone = $objUser->getPhone();
             $registerDate = $objUser->getRegisterDate();
+            $secretQuestion = $objUser->getSecretQuestion();
+            $secretAnswer = $objUser->getSecretAnswer();
 
             //Query
-            $querysql = "INSERT INTO user VALUES (:NAMES, :EMAIL, :PASSWORDS, :DNI, :CREDITCARD, :ADDRESSS, :POSTCODE, :PHONE, :REGISTERDATE )";
+            $querysql = "INSERT INTO user VALUES (:NAMES, :EMAIL, :PASSWORDS, :DNI, :CREDITCARD, :ADDRESSS, :POSTCODE, :PHONE, :REGISTERDATE, :SECRETQUESTION, :SECRETANSWER )";
 
             //Sanity param
-            $param = array(':NAMES' => $name, ':EMAIL' => $email, ':PASSWORDS' => $password, ':DNI' => $dni, ':CREDITCARD' => $creditCard, ':ADDRESSS' => $address, ':POSTCODE' => $postcode, ':PHONE' => $phone, ':REGISTERDATE' => $registerDate);
+            $param = array(':NAMES' => $name, ':EMAIL' => $email, ':PASSWORDS' => $password, ':DNI' => $dni, ':CREDITCARD' => $creditCard, ':ADDRESSS' => $address, ':POSTCODE' => $postcode, ':PHONE' => $phone, ':REGISTERDATE' => $registerDate, ':SECRETQUESTION' => $secretQuestion, ':SECRETANSWER' => $secretAnswer);
 
             //Execute Query
             $message = $this->objDB->SimpleQuery($querysql, $param);

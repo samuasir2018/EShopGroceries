@@ -120,6 +120,26 @@
                 </div>
             </div>
             <div class="row containerRegistro">
+                <div class="col-5">
+                    <h4>Pregunta Secreta</h4>
+                </div>
+                <div class="col-7">
+                    <select id="inputCupon" class="form-select" aria-label="Default select example" name="PREGUNTASECRETA" id="inputPreguntaSecreta">
+                        <option value="0" selected>¿Dónde naciste?</option>
+                        <option value="1" selected>¿Nombre de tu mascota?</option>
+                        <option value="2" selected>¿Cuál es tu ciudad favorita?</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row containerRegistro">
+                <div class="col-5">
+                    <h4>Respuesta Secreta</h4>
+                </div>
+                <div class="col-7">
+                    <input type="text" class="form-control inputTexto" name="RESPUESTASECRETA" id="inputRespuestaSecreta" placeholder="Introduce tu Respuesta Secreta">
+                </div>
+            </div>
+            <div class="row containerRegistro">
                 <button type="submit" name="BOTONREGISTRO" id="enviarRegistro" class="btn btn-danger botonRegistrar">REGISTRAR</button>
             </div>
             <?php
@@ -127,10 +147,10 @@
                 {
                     $encryptPassword = sha1($_POST['CONTRASENNA']);
                     $fechaRegistro = date('Y-m-d');
-                    if ($_POST['NOMBRE'] == '' or $_POST['EMAIL'] == '' or $encryptPassword == '' or $_POST['DNI'] == '' or $_POST['TARJETA'] == '' or $_POST['DIRECCION'] == '' or $_POST['CP'] == ''){
+                    if ($_POST['NOMBRE'] == '' or $_POST['EMAIL'] == '' or $encryptPassword == '' or $_POST['DNI'] == '' or $_POST['TARJETA'] == '' or $_POST['DIRECCION'] == '' or $_POST['CP'] == '' or $_POST['CP'] == '' or $_POST['PREGUNTASECRETA'] == '' or $_POST['RESPUESTASECRETA'] == ''){
                         echo "<div class='alert alert-danger' role='alert'>Uno de los campos es nulo. Rellene todos los</div>";
                     } else {
-                        $objUser = new User($_POST['NOMBRE'], $_POST['EMAIL'], $encryptPassword, $_POST['DNI'], $_POST['TARJETA'], $_POST['DIRECCION'], $_POST['CP'], $_POST['TELEFONO'], $fechaRegistro);
+                        $objUser = new User($_POST['NOMBRE'], $_POST['EMAIL'], $encryptPassword, $_POST['DNI'], $_POST['TARJETA'], $_POST['DIRECCION'], $_POST['CP'], $_POST['TELEFONO'], $fechaRegistro, $_POST['PREGUNTASECRETA'], $_POST['RESPUESTASECRETA'] );
                         $daoUser = new DaoUser();
                         $message = $daoUser-> createUser($objUser);
                         if ($message==1){
