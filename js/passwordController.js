@@ -11,6 +11,7 @@ function passRecovery(){
         data: { email: usuario, pregunta: preguntaSecreta, respuesta: respuestaSecreta, contrasena: nuevaContrasena }
         }).done(function(res) {
             window.alert(res);
+            location.reload();
         })
         .fail(function(){
             window.alert("fallo en el sistema");
