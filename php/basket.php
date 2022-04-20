@@ -44,7 +44,7 @@ class Basket{
                     </div>
                     <div class="col-4">
                         <br><br><br><br>
-                        <img src="../img/icons/remove.png" class="iconRemove" onclick="delBasket('.$product["productId"].', )"></img>
+                        <img src="./img/icons/remove.png" class="iconRemove" onclick="delBasket('.$product["productId"].', )"></img>
                     </div>
                 </div>
                 <hr class="hrBasket"></hr>
