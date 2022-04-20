@@ -40,7 +40,7 @@ class Basket{
                         <br>
                         <b>Cantidad: '.$product["amount"].'</b>
                         <br><br>
-                        <img src="'.$fullProduct["icon"].'" class="iconBasket"></img>
+                        <img src="../'.$fullProduct["icon"].'" class="iconBasket"></img>
                     </div>
                     <div class="col-4">
                         <br><br><br><br>
