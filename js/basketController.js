@@ -4,7 +4,7 @@ function addBasket(idProducto){
 
     if (cantidad > 0){
         $.ajax({
-            url: 'php/insertBasket.php',
+            url: '../php/insertBasket.php',
             type: 'POST',
             data: { email: usuario, idProducto: idProducto, cantidad: cantidad }
             }).done(function(res) {
@@ -26,7 +26,7 @@ function delBasket(idProducto){
     let usuario = document.getElementById('usuario').value;
 
     $.ajax({
-        url: 'php/deleteBasket.php',
+        url: '../php/deleteBasket.php',
         type: 'POST',
         data: { email: usuario, idProducto: idProducto}
         }).done(function(res) {
