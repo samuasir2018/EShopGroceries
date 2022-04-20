@@ -124,7 +124,7 @@
                     <h4>Pregunta Secreta</h4>
                 </div>
                 <div class="col-7">
-                    <select id="inputCupon" class="form-select" aria-label="Default select example" name="PREGUNTASECRETA" id="inputPreguntaSecreta">
+                    <select class="form-select" aria-label="Default select example" name="PREGUNTASECRETA" id="inputPreguntaSecreta">
                         <option value="0" selected>¿Dónde naciste?</option>
                         <option value="1" selected>¿Nombre de tu mascota?</option>
                         <option value="2" selected>¿Cuál es tu ciudad favorita?</option>

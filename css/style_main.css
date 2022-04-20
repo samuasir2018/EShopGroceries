@@ -88,6 +88,11 @@ a:hover{
     max-width: 50%;
 }
 
+.pregunta{
+    background-color: whitesmoke;
+    max-width: 50%;
+}
+
 .divInputDireccion{
     padding-top: 1%;
     padding-bottom: 1%;

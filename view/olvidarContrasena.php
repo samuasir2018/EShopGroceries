@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="inicioSesion">
-                    <h2>Inicio de Sesión</h2>
+                    <h2>Recuperación de contraseña</h2>
                 </div>
             </div>
         </div>
@@ -54,29 +54,73 @@
         </div>
 
 
-        <div class="loginCentral">
-            <div class="row">
-                <div class="col-12 direccionPass">
-                    <h2>Dirección email</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 divInputDireccion">
-                    <input type="email" class="form-control inputDireccion" id="inputEmail" placeholder="Introduce tu correo electronico">
-                </div>
+    <div class="loginCentral">
+        <div class="row">
+            <div class="col-12 direccionPass">
+                <h2>Dirección email</h2>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 divInputDireccion">
+                <input type="email" class="form-control inputDireccion" id="inputEmail" name="EMAIL" placeholder="Introduce tu correo electronico">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 direccionPass">
+                <h2>Pregunta Secreta</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 divInputDireccion">
+                <select class="form-select pregunta" aria-label="Default select example" name="PREGUNTASECRETA" id="inputPreguntaSecreta">
+                    <option value="0" selected>¿Dónde naciste?</option>
+                    <option value="1" selected>¿Nombre de tu mascota?</option>
+                    <option value="2" selected>¿Cuál es tu ciudad favorita?</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 direccionPass">
+                <h2>Respuesta Secreta</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 divInputDireccion">
+                <input type="text" class="form-control inputDireccion" id="inputRespuestaaSecreta" name="RESPUESTASECRETA" placeholder="Introduce tu respuesta secreta">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 direccionPass">
+                <h2>Nueva Contraseña</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 divInputDireccion">
+                <input type="password" class="form-control inputDireccion" id="inputNuevaContrasena" name="NUEVACONTRASENA" placeholder="Introduce tu nueva contraseña">
+            </div>
+        </div>
+    </div>
 
-        <div class="contenedorCentralInferior">
-            <div class="row">
-                <div class="col-12">
-                    <button type="button" class="btn btn-primary botonIniciarSesion">Recuperar Contraseña</button><br>
-                </div>
+    <div class="contenedorCentralInferior">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-primary botonIniciarSesion" name="enviarRegistro" id="botonRegistro" onclick="passRecovery()">Recuperar contraseña</button>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 divOlvidoPass">
+                <h5><a href="./olvidarContrasena.php">¿Has olvidado tu contraseña?
+                </a></h5>
+            </div>
+        </div>
+    </div>
+
+
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="../js/passwordController.js"></script>
+        <script src="../js/jquery-3.2.1.min.js"></script>
     </body>
     <footer id="footerZone">
         <hr>

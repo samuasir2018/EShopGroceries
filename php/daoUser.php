@@ -177,9 +177,45 @@
     
             } else {
                 //si existe
+
+                $acceso='C';
+                $hora=time();
+                $consultaInsertar = "INSERT INTO login (email, password, time, access) VALUES (:USUARIO, :CLAVE, :HORA, :ACCESO)";
+                $paramInsertar = array(':USUARIO' => $user,':CLAVE' => $encryptPassword,':HORA' => $hora, ':ACCESO' => $acceso);
+                $this->objDB->SimpleQuery($consultaInsertar,$paramInsertar);
+
+                //Redirigir
                 $_SESSION['user'] = $this->getDataUser($user);
                 $_SESSION['orderDetails'] = $this->getDataOrderDetails($user);
                 header('Location: interfazPersonal.php');
+            }
+        }
+
+        public function checkValidData($email, $pregunta, $respuesta){
+            $consulta = "SELECT * FROM user WHERE email = :EMAIL AND secretQuestion = :SECRETQUESTION AND secretAnswer = :SECRETANSWER"; //consulta con los parametros puestos para que no se produzca inyeccion
+            $param = array(':EMAIL' => $email,':SECRETQUESTION' => $pregunta, ':SECRETANSWER' => $respuesta);//parametros de la consulta
+            $this->objDB->DataQuery($consulta,$param);//Se ejecuta la consulta
+            $filasArray = $this->objDB->filas;
+            $count = 0;
+            foreach ($filasArray as $fila){//Solo devuelve un producto, porque son de ID unicos
+                $count ++;
+            }
+            if ($count == 0){ //Si devuelve 0 es que no había ninguna entrada de ese usuario con esa pregunta y esa respuesta
+                return false;
+            } else { // este caso siempre va a ser 1 porque no puede haber más de 1 entrada ya que el email es único
+                return true;
+            }
+        }
+
+        public function changePassword($email, $pregunta, $respuesta, $nuevaContrasena){
+            if ($this->checkValidData($email, $pregunta, $respuesta)){
+                $encryptPassword = sha1($nuevaContrasena);
+                $consultaUpdate = "UPDATE user SET password = :PASSWORD WHERE email = :EMAIL AND secretQuestion = :SECRETQUESTION AND secretAnswer = :SECRETANSWER";
+                $paramUpdate = array(':EMAIL' => $email,':SECRETQUESTION' => $pregunta, ':SECRETANSWER' => $respuesta, ':PASSWORD' => $encryptPassword);
+                $this->objDB->SimpleQuery($consultaUpdate,$paramUpdate);
+                return true;
+            } else {
+                return false;
             }
         }
     }
