@@ -8,7 +8,7 @@
 
         public function __construct()
         {
-            $this->objDB = new DB ('eshopgroceries');
+            $this->objDB = new DB ('id18809134_eshopgroceries');
         }
 
         public function createUser($objUser)
