@@ -8,7 +8,7 @@
 
         public function __construct()
         {
-            $this->objDB = new DB ('id18809134_eshopgroceries');
+            $this->objDB = new DB ('eshopgroceries');
         }
 
         public function printBuylist()

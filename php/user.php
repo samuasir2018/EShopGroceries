@@ -10,8 +10,11 @@ class User{
     private $postcode;
     private $phone;
     private $registerDate;
+    private $secretQuestion;
+    private $secretAnswer;
 
-    public function __construct($name, $email, $password, $dni, $creditCard, $address, $postcode, $phone, $registerDate)
+
+    public function __construct($name, $email, $password, $dni, $creditCard, $address, $postcode, $phone, $registerDate, $secretQuestion, $secretAnswer)
     {
         $this->name = $name;
         $this->email = $email;
@@ -22,6 +25,8 @@ class User{
         $this->postcode = $postcode;
         $this->phone = $phone;
         $this->registerDate = $registerDate;
+        $this->secretQuestion = $secretQuestion;
+        $this->secretAnswer = $secretAnswer;
     } //Constructor básico
 //Getter y Setters básicos
     public function getName()
@@ -120,6 +125,28 @@ class User{
     public function setRegisterDate($registerDate)
     {
         $this->registerDate = $registerDate;
+        return $this;
+    }
+
+    public function getSecretQuestion()
+    {
+        return $this->secretQuestion;
+    }
+
+    public function setSecretQuestion($secretQuestion)
+    {
+        $this->secretQuestion = $secretQuestion;
+        return $this;
+    }
+
+    public function getSecretAnswer()
+    {
+        return $this->secretAnswer;
+    }
+
+    public function setSecretAnswer($secretAnswer)
+    {
+        $this->secretAnswer = $secretAnswer;
         return $this;
     }
 }

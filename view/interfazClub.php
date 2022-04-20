@@ -63,7 +63,7 @@
                     <input type="text" class="form-control inputBusqueda" name="BUSQUEDA" id="inputBusqueda" placeholder="Buscar ...">
                 </div>
                 <div class="col-1">
-                    <input type="image" src="img/icons/Lupa.png" class="lupa"></input>
+                    <input type="image" src="../img/icons/Lupa.png" class="lupa"></input>
                 </div>
             </div>
         </form>
@@ -121,7 +121,7 @@
                             $objBasket->updateBasket($_SESSION['user']['email']);
                             $objBasket->printBasket();
                         ?>
-                        <button onclick="location.href='../pagar.php'" type="button" class="btn btn-danger botonPagar">Finalizar</button>
+                        <button onclick="location.href='./pagar.php'" type="button" class="btn btn-danger botonPagar">Finalizar</button>
                         <br><br>
                     </div>
                 </div>

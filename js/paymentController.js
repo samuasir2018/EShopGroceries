@@ -3,7 +3,7 @@ function payOrder(){
     let coupon = document.getElementById('inputCupon').value;
 
     $.ajax({
-        url: 'php/payment.php',
+        url: '../php/payment.php',
         type: 'POST',
         data: { email: usuario, couponId: coupon}
         }).done(function(res) {
@@ -31,7 +31,7 @@ $('select').on('change', function() {
     var label = document.getElementById('totalDescuento');
     var coupon = this.value;
     $.ajax({
-        url: 'php/getDiscount.php',
+        url: '../php/getDiscount.php',
         type: 'POST',
         data: {couponId: coupon}
         }).done(function(res) {
