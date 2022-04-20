@@ -8,8 +8,8 @@ class DB {
     
 private $host="localhost";
 private $dbname;
-private $user="id18809134_root";
-private $pass="Password1234567890!";
+private $user="root";
+private $pass="";
 private $db;    //Propiedad para guardar el objeto PDO
 
 public $filas=array();   //Propiedad pública para guardar el resultado de la consultas de seleccion
