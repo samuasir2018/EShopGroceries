@@ -155,7 +155,7 @@
                         $message = $daoUser-> createUser($objUser);
                         if ($message==1){
                             echo "<div class='alert alert-success' role='alert'>El registro se ha realizado correctamente</div>";
-                        } else if ($message=1062){
+                        } else if ($message==1062){
                             echo "<div class='alert alert-danger' role='alert'>Usuario Duplicado, utilice un dni y/o correo diferente. Código de error: ".$message."</div>";
                         } else {
                             echo "<div class='alert alert-danger' role='alert'>Error desconocido. Contacte con el administrador, número de error: ".$message."</div>";
