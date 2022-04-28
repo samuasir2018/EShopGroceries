@@ -2,7 +2,7 @@ function addBasket(idProducto){
     let cantidad = document.getElementById('cantidadInput'+idProducto).value;
     let usuario = document.getElementById('usuario').value;
 
-    if (cantidad > 0){
+    if (cantidad > 0 && cantidad < 99){
         $.ajax({
             url: '../php/insertBasket.php',
             type: 'POST',
@@ -14,8 +14,11 @@ function addBasket(idProducto){
             .fail(function(){
                 console.log("fallo en el sistema");
             }); 
-    } else {
+    } else if (cantidad <= 0){
         window.alert("La cantidad seleccionada no puede ser inferior a 1");
+        location.reload();
+    } else {
+        window.alert("La cantidad seleccionada no puede ser superior a 99");
         location.reload();
     }
     
